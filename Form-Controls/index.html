@@ -13,15 +13,58 @@
     </header>
     <main>
       <form>
-        <!-- write your html here-->
-        <!-- 
-          try writing out the requirements first as comments
-        this will also help you fill in your PR message later-->
+        <!-- 1. What is the customer's name? I must collect this data, and validate it. But what is a valid name? I must decide something. -->
+        <div>
+          <label for="name">Customer Name:</label>
+          <input type="text" id="name" name="name" minlength="2" required />
+        </div>
+
+        <!-- 2. What is the customer's email? I must make sure the email is valid. Email addresses have a consistent pattern. -->
+        <div>
+          <label for="email">Customer Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <!-- 3. What colour should this t-shirt be? I must give 3 options. How will I make sure they don't pick other colours? -->
+        <fieldset>
+          <legend>T-shirt Colour:</legend>
+          <div>
+            <input type="radio" id="red" name="colour" value="red" required />
+            <label for="red">Red</label>
+          </div>
+          <div>
+            <input type="radio" id="blue" name="colour" value="blue" />
+            <label for="blue">Blue</label>
+          </div>
+          <div>
+            <input type="radio" id="green" name="colour" value="green" />
+            <label for="green">Green</label>
+          </div>
+        </fieldset>
+
+        <!-- 4. What size does the customer want? I must give the following 6 options: XS, S, M, L, XL, XXL -->
+        <div>
+          <label for="size">T-shirt Size:</label>
+          <select id="size" name="size" required>
+            <option value="" disabled selected>--Please choose a size--</option>
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="XXL">XXL</option>
+          </select>
+        </div>
+
+        <!-- 5. Submit Button -->
+        <div>
+          <button type="submit">Submit Order</button>
+        </div>
       </form>
     </main>
     <footer>
-      <!-- change to your name-->
-      <h2>By HOMEWORK SOLUTION</h2>
+      <!-- change to your name -->
+      <h2>By Said Achibani</h2>
     </footer>
   </body>
 </html>
